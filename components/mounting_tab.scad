@@ -22,9 +22,23 @@ module mounting_tab(){
         
         union(){
             rotate([0, 90, 0]){
-                translate([-22, 8.5, thickness/2]){
-                    cylinder(r=1.5, h=thickness, center=true);
-                    translate([0, 0, -1.5]) {
+                hull(){
+                    translate([-22.5, 8.5, thickness/2]){
+                        cylinder(r=1.5, h=thickness, center=true);
+                    }
+                    
+                    translate([-20, 8.5, thickness/2]){
+                        cylinder(r=1.5, h=thickness, center=true);
+                    }
+                }
+                
+                hull(){
+                    translate([-22.5, 8.5, thickness/2 -1.5]) {
+                        cylinder(r=3, h=3, center=true);
+                    }
+                    
+                    
+                    translate([-20, 8.5, thickness/2 -1.5]) {
                         cylinder(r=3, h=3, center=true);
                     }
                 }
